@@ -17,6 +17,7 @@ public class MyStreams {
 		myList.add(5);
 		myList.add(6);
 		myList.add(8);
+		myList.add(3);
 
 		// iterate to show each element of stream
 		myList.stream().forEach(n -> System.out.println(n));
@@ -63,6 +64,10 @@ public class MyStreams {
 		System.out.println("allEven " + allEven);
 		System.out.println("anyEven " + oneEven);
 		
+		
+		List<Integer> sortedList = myList.stream().sorted((n1,n2) -> n1-n2).collect(Collectors.toList());
+
+		System.out.println(sortedList);
 		
 	}
 }
