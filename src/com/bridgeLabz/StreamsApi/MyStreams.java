@@ -2,6 +2,7 @@ package com.bridgeLabz.StreamsApi;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 
 public class MyStreams {
 
@@ -15,5 +16,9 @@ public class MyStreams {
 
 		// iterate to show each element of stream
 		myList.stream().forEach(n -> System.out.println(n));
+		
+		Function <Integer, Double> toDoubleFunction =  Integer::doubleValue;
+		myList.stream().forEach(n -> System.out.println(toDoubleFunction.apply(n)));
+
 	}
 }
