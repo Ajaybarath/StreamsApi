@@ -7,6 +7,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
+
 public class MyStreams {
 
 	
@@ -53,6 +54,15 @@ public class MyStreams {
 		Integer sum = myList.stream().reduce(0,  Integer::sum);
 		long count = myList.stream().count();
 		System.out.println("Average is " + sum/count);
+		
+		
+		
+		boolean allEven = myList.stream().allMatch(isEvenFunction);
+		boolean oneEven = myList.stream().anyMatch(isEvenFunction);
+		
+		System.out.println("allEven " + allEven);
+		System.out.println("anyEven " + oneEven);
+		
 		
 	}
 }
