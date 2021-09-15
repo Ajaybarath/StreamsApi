@@ -50,5 +50,9 @@ public class MyStreams {
 		System.out.println("max even is " + max);
 		
 		
+		Integer sum = myList.stream().reduce(0,  Integer::sum);
+		long count = myList.stream().count();
+		System.out.println("Average is " + sum/count);
+		
 	}
 }
