@@ -43,7 +43,11 @@ public class MyStreams {
 
 		
 		
+		Integer min = myList.stream().filter(isEvenFunction).min((n1,n2) -> n1-n2).orElse(null);
+		System.out.println("min even is " + min);
 		
+		Integer max = myList.stream().filter(isEvenFunction).min((n1,n2) -> n2-n1).orElse(null);
+		System.out.println("max even is " + max);
 		
 		
 	}
