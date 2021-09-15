@@ -35,5 +35,16 @@ public class MyStreams {
 		
 		System.out.println(evenList);
 		
+		Integer firstEven = myList.stream().filter(isEvenFunction).peek(n -> System.out.println(n))
+				.findFirst()
+				.orElse(null);
+		
+		System.out.println(firstEven);
+
+		
+		
+		
+		
+		
 	}
 }
